@@ -1,6 +1,7 @@
 from PIL import Image, ImageTk, ImageDraw, ImageFont
 from tkinter import filedialog, colorchooser, PhotoImage
 
+# function to display an image on canvas
 def show_img(canvas, path):
     im = Image.open(path) 
     new_size = (320, 224)
@@ -12,6 +13,8 @@ def show_img(canvas, path):
     canvas.create_image(0, 0, anchor="nw", image=tk_image)
     canvas.image = tk_image  
 
+
+# function to open an local image using filedialog
 def open_image(canvas):
     global img_tk
     path = filedialog.askopenfilename()
@@ -23,6 +26,8 @@ def open_image(canvas):
     
     show_img(canvas,'images/original_img.png')
 
+
+# function to watermark a image with text and color 
 def watermark_img(text, text_color, canvas):
     with Image.open("images/original_img.png").convert("RGBA") as base:
 
@@ -39,11 +44,13 @@ def watermark_img(text, text_color, canvas):
         show_img(canvas, "images/watermarked_img.png")
 
 
+# function to select a color using tkinter colorchooser
 def select_color(label):
     color = colorchooser.askcolor(title="Choose a color")[1]
     label.config(text=f"{color}", bg=color)
 
 
+# function to save a image on a local file using filedialog
 def save_img():
     file_path = filedialog.asksaveasfilename(defaultextension=".png", filetypes=[("PNG files", "*.png")])
 
@@ -52,5 +59,3 @@ def save_img():
     
     img = Image.open("images/watermarked_img.png")
     img.save(file_path)
-
-
