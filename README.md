@@ -3,6 +3,9 @@
 ## Overview
 This Python application allows users to watermark images with custom text and color. The user interface is built using Tkinter, and the image manipulation is performed with the Pillow (PIL) library.
 
+## User Interface
+![Application Interface](images/interface_screenshot.png)
+
 ## Files
 - **main.py**: Contains the main execution code and Tkinter UI setup.
 - **ui.py**: Imports the main function and executes the application.
