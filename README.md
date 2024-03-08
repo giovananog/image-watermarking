@@ -27,10 +27,6 @@ Run the application by executing `main.py`.
 
 ## Functionality
 
-### User Interface
-- The main window displays the title "Image Watermarking" and a canvas to show images.
-- Users can input watermark text, upload an image, pick a text color, and watermark the image.
-
 ### Buttons
 - **Upload Image**: Allows users to open a local image file.
 - **Pick a color**: Opens a color picker to choose the text color.
@@ -51,5 +47,3 @@ Run the application by executing `main.py`.
 3. Enter watermark text and choose a text color.
 4. Click "Watermark Image" to apply the watermark.
 5. Save the watermarked image using the "Save Image" button.
-
-;; Feel free to explore and enhance the application as needed!
